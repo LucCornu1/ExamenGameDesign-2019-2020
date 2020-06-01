@@ -36,4 +36,7 @@ func move_player() -> Vector2:
 			out.x = clamp(out.x, -speed, speed)
 			out.y = clamp(out.y, -speed, speed)
 	
+#	if is_reloading and current_mag < 5:
+#		current_mag += 1
+	
 	return out
