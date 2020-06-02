@@ -1,5 +1,7 @@
-*.exe
-*.o
-*.depend
-*.layout
-*.out
+__pycache__
+*.pyc
+.DS_Store
+*~
+.idea
+.import/
+logs/

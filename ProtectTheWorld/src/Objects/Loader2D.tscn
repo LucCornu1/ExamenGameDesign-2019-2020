@@ -10,14 +10,6 @@ radius = 78.1025
 [node name="Loader2D" type="Area2D"]
 script = ExtResource( 2 )
 
-[node name="Ammo_mag" parent="." instance=ExtResource( 3 )]
-margin_top = 74.0
-margin_bottom = 90.0
-
-[node name="ColorRect" parent="Ammo_mag" index="0"]
-visible = true
-color = Color( 1, 1, 1, 1 )
-
 [node name="light" type="Sprite" parent="."]
 scale = Vector2( 0.326172, 0.326172 )
 texture = ExtResource( 1 )
@@ -27,6 +19,10 @@ shape = SubResource( 1 )
 
 [node name="ReloadTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="Ammo_mag" parent="." instance=ExtResource( 3 )]
+margin_top = 76.0
+margin_bottom = 105.0
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
 [connection signal="timeout" from="ReloadTimer" to="." method="_on_ReloadTimer_timeout"]
