@@ -1,15 +1,33 @@
-extends Actor
+extends Area2D
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	var new_position = get_global_mouse_position()
-	_velocity = (new_position - position)
-	return
+export (float) var speed = 600.0
+export (int) var damage = 1
+export (float) var lifetime = 2.0
+
+var velocity: Vector2 = Vector2()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(_delta):
-	_velocity.x = clamp(_velocity.x, -500.0, 500.0)
-	_velocity.y = clamp(_velocity.y, -500.0, 500.0)
-	_velocity = move_and_slide(_velocity)
-	return
+func start(_position: Vector2, _direction: Vector2):
+	position = _position
+	rotation = _direction.angle()
+	$Lifetime.wait_time = lifetime
+	$Lifetime.start()
+	velocity = _direction * speed
+
+
+func _process(delta):
+	position += velocity * delta
+
+
+func explode():
+	queue_free()
+
+
+func _on_body_entered(body):
+	explode()
+	if body.has_method('take_damage'):
+		body.take_damage(damage)
+
+
+func _on_Lifetime_timeout():
+	explode()

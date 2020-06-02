@@ -15,3 +15,9 @@ func set_camera_options():
 	
 	$Player/Camera2D.zoom.x = 1.0
 	$Player/Camera2D.zoom.y = 1.0
+
+
+func _on_Player_shoot(bullet: PackedScene, _position: Vector2, _direction: Vector2):
+	var b = bullet.instance()
+	add_child(b)
+	b.start(_position, _direction)
