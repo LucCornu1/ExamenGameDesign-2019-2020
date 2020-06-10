@@ -3,22 +3,15 @@ extends Actor
 signal shoot
 
 export (PackedScene) var bullet = preload("res://src/Actors/Bullet.tscn")
-export (float) var rotation_speed = 1.0
 export (float) var fire_cooldown = 1.0
 export (int) var health = 5
+export (bool) var can_shoot = true
 
-var can_shoot: bool = true
+onready var animation: AnimationPlayer = get_node("AnimationPlayer")
 
 
 func _ready():
 	$Timer.wait_time = fire_cooldown
-
-
-func _on_Detector_body_entered():
-	queue_free()
-	if get_tree().change_scene("res://src/Screens/MainScreen.tscn") != OK:
-		print("An unexpected error occured when trying to switch to the next scene")
-	return
 
 
 func shoot():
@@ -43,7 +36,6 @@ func move_player() -> Vector2:
 	var mouse_position: = get_global_mouse_position()
 	
 	if Input.is_action_pressed("move&shoot"):
-		shoot()
 		if !(mouse_position.x <= position.x +15 and mouse_position.y <= position.y +15) or !(mouse_position.x >= position.x -15 and mouse_position.y >= position.y -15):
 			$body.look_at(mouse_position)
 			$body.rotation_degrees -= 90
@@ -51,12 +43,26 @@ func move_player() -> Vector2:
 			out = speed*dir
 			out.x = clamp(out.x, -speed, speed)
 			out.y = clamp(out.y, -speed, speed)
+		shoot()
 	
-#	if is_reloading and current_mag < 5:
-#		current_mag += 1
+	if Input.is_action_just_pressed("move_down"):
+		take_damage(1)
 	
 	return out
 
 
 func _on_Timer_timeout():
 	can_shoot = true
+
+
+func take_damage(damage: int):
+	health -= damage
+	animation.play("Damage_Taken")
+	if health <= 0:
+		death()
+
+
+func death():
+	animation.play("Death")
+	yield(animation, "animation_finished")
+	queue_free()

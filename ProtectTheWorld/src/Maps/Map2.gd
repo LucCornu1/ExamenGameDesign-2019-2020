@@ -3,7 +3,6 @@ extends Map
 
 func _ready():
 	set_camera_options()
-	$Player.can_shoot = false
 
 
 func set_camera_options():
@@ -14,5 +13,5 @@ func set_camera_options():
 	$Player/Camera2D.limit_top = map_limits.position.y * map_cellsize.y
 	$Player/Camera2D.limit_bottom = map_limits.end.y * map_cellsize.y
 	
-	$Player/Camera2D.zoom.x = 1.0
-	$Player/Camera2D.zoom.y = 1.0
+	$Player/Camera2D.zoom.x = 1.2
+	$Player/Camera2D.zoom.y = 1.2
