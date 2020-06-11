@@ -3,7 +3,7 @@ extends Actor
 signal shoot
 
 export (PackedScene) var bullet = preload("res://src/Actors/Bullet.tscn")
-export (float) var fire_cooldown = 1.0
+export (float) var fire_cooldown = 3
 export (int) var health = 5
 export (bool) var can_shoot = true
 
@@ -56,9 +56,10 @@ func _on_Timer_timeout():
 
 
 func take_damage(damage: int):
-	health -= damage
-	animation.play("Damage_Taken")
-	if health <= 0:
+	if health > 0:
+		health -= damage
+		animation.play("Damage_Taken")
+	else:
 		death()
 
 

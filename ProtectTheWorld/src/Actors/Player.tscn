@@ -11,7 +11,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 77.9998, 88.0002 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "Damage_Taken"
 length = 0.5
 tracks/0/type = "value"
@@ -27,7 +27,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.815686, 0.4, 0.4, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "Death"
 length = 0.7
 tracks/0/type = "value"
@@ -67,7 +67,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 tracks/0/type = "value"
 tracks/0/path = NodePath("body:modulate")
 tracks/0/interp = 1
@@ -113,8 +113,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-speed = 300.0
-fire_cooldown = 0.4
+speed = 290.0
+fire_cooldown = 0.6
 
 [node name="body" type="Sprite" parent="."]
 position = Vector2( 0, -1.52588e-05 )
@@ -141,7 +141,7 @@ smoothing_enabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "START"
-anims/Damage_Taken = SubResource( 3 )
-anims/Death = SubResource( 4 )
-anims/START = SubResource( 5 )
+anims/Damage_Taken = SubResource( 2 )
+anims/Death = SubResource( 3 )
+anims/START = SubResource( 4 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
