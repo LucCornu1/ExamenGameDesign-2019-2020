@@ -1,12 +1,21 @@
 tool
 extends StaticBody2D
 
-enum Items {fenceRed, fenceYellow, sandbagBeige}
+enum Items {
+	fenceRed, fenceYellow, sandbagBeige, wireCrooked, 
+	wireStraight, treeBrown_large, treeGreen_large, 
+	barricadeMetal
+}
 
 var regions = {
 	Items.fenceRed: Rect2(243, 336, 96, 32),
 	Items.fenceYellow: Rect2(128, 216, 104, 32),
-	Items.sandbagBeige: Rect2(436, 164, 64, 44)
+	Items.sandbagBeige: Rect2(436, 164, 64, 44),
+	Items.wireCrooked: Rect2(346, 0, 88, 95),
+	Items.wireStraight: Rect2(688, 0, 33, 139),
+	Items.treeBrown_large: Rect2(0, 0, 128, 128),
+	Items.treeGreen_large: Rect2(0, 128, 128, 128),
+	Items.barricadeMetal: Rect2(596, 532, 56, 56)
 }
 
 export (Items) var type setget _update

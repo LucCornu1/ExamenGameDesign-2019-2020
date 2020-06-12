@@ -1,9 +1,9 @@
 extends Actor
 
-#signal shoot
+signal shoot
 
-export (PackedScene) var bullet = preload("res://src/Actors/Bullet.tscn")
-export (float) var fire_cooldown = 1.0
+export (PackedScene) var bullet = preload("res://src/Actors/Bullet_ennemi.tscn")
+export (float) var fire_cooldown = 0.4
 export (int) var health = 2
 export (bool) var can_shoot = true
 export (float) var rotation_speed = 1.1
@@ -34,6 +34,20 @@ func death():
 	queue_free()
 
 
+func shoot(dir: Vector2):
+	if can_shoot:
+		can_shoot = false
+		$Timer.start()
+		var temp: float = dir.y
+		dir.y = dir.x
+		dir.x = -temp
+		emit_signal('shoot', bullet, $body/Position2D.global_position, dir)
+
+
+func _on_Timer_timeout():
+	can_shoot = true
+
+
 func _physics_process(delta):
 	if target and !dead:
 		var target_dir: Vector2 = (target.global_position - global_position).normalized()
@@ -42,6 +56,8 @@ func _physics_process(delta):
 		target_dir.y = -target_dir.x
 		target_dir.x = temp
 		$body.global_rotation = current_dir.linear_interpolate(target_dir, rotation_speed * delta).angle()
+		
+		shoot(current_dir)
 
 
 func _on_Detector_body_entered(body):

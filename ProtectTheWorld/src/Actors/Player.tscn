@@ -114,7 +114,6 @@ __meta__ = {
 "_edit_group_": true
 }
 speed = 290.0
-fire_cooldown = 0.6
 
 [node name="body" type="Sprite" parent="."]
 position = Vector2( 0, -1.52588e-05 )

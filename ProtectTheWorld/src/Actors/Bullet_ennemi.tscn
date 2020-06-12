@@ -7,9 +7,8 @@
 radius = 9.0
 height = 8.0
 
-[node name="Bullet" type="Area2D"]
+[node name="Bullet_ennemi" type="Area2D"]
 collision_layer = 0
-collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="coin" type="Sprite" parent="."]

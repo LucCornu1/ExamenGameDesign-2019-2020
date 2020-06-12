@@ -3,7 +3,7 @@ extends Actor
 signal shoot
 
 export (PackedScene) var bullet = preload("res://src/Actors/Bullet.tscn")
-export (float) var fire_cooldown = 3
+export (float) var fire_cooldown = 0.6
 export (int) var health = 5
 export (bool) var can_shoot = true
 
@@ -44,9 +44,6 @@ func move_player() -> Vector2:
 			out.x = clamp(out.x, -speed, speed)
 			out.y = clamp(out.y, -speed, speed)
 		shoot()
-	
-	if Input.is_action_just_pressed("move_down"):
-		take_damage(1)
 	
 	return out
 

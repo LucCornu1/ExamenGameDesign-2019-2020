@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "Map",
 "language": "GDScript",
 "path": "res://src/Maps/Map.gd"
+}, {
+"base": "Area2D",
+"class": "Projectile",
+"language": "GDScript",
+"path": "res://Projectile.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",
-"Map": ""
+"Map": "",
+"Projectile": ""
 }
 
 [application]
@@ -33,10 +39,6 @@ config/icon="res://icon.png"
 [autoload]
 
 Chargeur="*res://src/Actors/Chargeur.gd"
-
-[debug]
-
-settings/stdout/print_fps=true
 
 [display]
 
