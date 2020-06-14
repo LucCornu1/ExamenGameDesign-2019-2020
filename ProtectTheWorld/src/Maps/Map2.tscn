@@ -72,6 +72,18 @@ rotation = -2.44246
 position = Vector2( 2320, 975 )
 rotation = -1.94781
 
+[node name="Obstacle48" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 3365, 920 )
+rotation = -2.0
+
+[node name="Obstacle47" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 3427, 1022 )
+rotation = -2.24763
+
+[node name="Obstacle28" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 3328, 809 )
+rotation = -1.77303
+
 [node name="Obstacle10" parent="Obstacles" instance=ExtResource( 5 )]
 position = Vector2( 1181, 91 )
 rotation = 0.389387
@@ -254,3 +266,5 @@ type = 7
 [connection signal="shoot" from="Player" to="." method="_on_Player_shoot"]
 [connection signal="shoot" from="Ennemi" to="." method="_on_Ennemi_shoot"]
 [connection signal="shoot" from="Ennemi2" to="." method="_on_Ennemi_shoot"]
+[connection signal="shoot" from="Ennemi3" to="." method="_on_Ennemi_shoot"]
+[connection signal="shoot" from="Ennemi4" to="." method="_on_Ennemi_shoot"]
