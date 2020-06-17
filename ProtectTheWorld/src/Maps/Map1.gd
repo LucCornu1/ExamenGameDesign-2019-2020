@@ -4,6 +4,7 @@ extends Map
 func _ready():
 	set_camera_options()
 	$Player.can_shoot = false
+	Stuff.shield_on = false
 
 
 func set_camera_options():

@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/background.png" type="Texture" id=1]
+[ext_resource path="res://src/UserInterface/ChangeSceneButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/UserInterface/Title.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/UserInterface/QuitMenu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/font_title.tres" type="DynamicFont" id=5]
+[ext_resource path="res://assets/font_default.tres" type="DynamicFont" id=6]
+
+[node name="MainScreen" type="Control"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" parent="." instance=ExtResource( 3 )]
+margin_left = -301.0
+margin_top = 95.4574
+margin_right = 302.0
+margin_bottom = 166.457
+custom_fonts/font = ExtResource( 5 )
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_left = 0.53
+anchor_top = 0.5
+anchor_right = 0.53
+anchor_bottom = 0.5
+margin_left = -358.6
+margin_top = -103.0
+margin_right = -28.6
+margin_bottom = 76.0
+rect_scale = Vector2( 1.8275, 1.58838 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" parent="Menu" instance=ExtResource( 2 )]
+margin_right = 330.0
+margin_bottom = 87.0
+custom_fonts/font = ExtResource( 6 )
+next_Scene_Path = "res://src/Maps/Map1.tscn"
+
+[node name="QuitMenu" parent="Menu" instance=ExtResource( 4 )]
+margin_top = 91.0
+margin_right = 330.0
+margin_bottom = 179.0
+custom_fonts/font = ExtResource( 6 )

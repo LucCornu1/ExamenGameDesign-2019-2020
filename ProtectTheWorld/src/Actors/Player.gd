@@ -1,6 +1,7 @@
 extends Actor
 
 signal shoot
+signal damage_taken
 
 export (PackedScene) var bullet = preload("res://src/Actors/Bullet.tscn")
 export (float) var fire_cooldown = 0.6
@@ -8,6 +9,9 @@ export (int) var health = 5
 export (bool) var can_shoot = true
 
 onready var animation: AnimationPlayer = get_node("AnimationPlayer")
+
+var max_speed: float = speed
+var max_health: int = health
 
 
 func _ready():
@@ -22,7 +26,7 @@ func shoot():
 		var temp: float = dir.y
 		dir.y = dir.x
 		dir.x = -temp
-		emit_signal('shoot', bullet, $body/Position2D.global_position, dir)
+		emit_signal("shoot", bullet, $body/Position2D.global_position, dir)
 
 
 func _physics_process(_delta):
@@ -53,11 +57,20 @@ func _on_Timer_timeout():
 
 
 func take_damage(damage: int):
+	health -= damage
+	emit_signal("damage_taken", health * 100/max_health)
 	if health > 0:
-		health -= damage
 		animation.play("Damage_Taken")
 	else:
 		death()
+
+
+
+func slow(b: bool):
+	if b == true:
+		speed = max_speed/3
+	else:
+		speed = max_speed
 
 
 func death():

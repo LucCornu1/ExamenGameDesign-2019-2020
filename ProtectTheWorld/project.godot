@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "Area2D",
 "class": "Projectile",
 "language": "GDScript",
-"path": "res://Projectile.gd"
+"path": "res://src/Actors/Projectile.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",
@@ -33,17 +33,18 @@ _global_script_class_icons={
 [application]
 
 config/name="ProtectTheWorld"
-run/main_scene="res://src/Maps/Map1.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://src/Screens/MainScreen.tscn"
+config/icon="res://assets/shield_silver.png"
 
 [autoload]
 
-Chargeur="*res://src/Actors/Chargeur.gd"
+Stuff="*res://src/Actors/Stuff.gd"
 
 [display]
 
 window/size/width=1920
 window/size/height=1080
+window/stretch/mode="2d"
 
 [input]
 

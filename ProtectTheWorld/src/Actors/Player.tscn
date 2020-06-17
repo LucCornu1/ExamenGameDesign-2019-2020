@@ -116,12 +116,12 @@ __meta__ = {
 speed = 290.0
 
 [node name="body" type="Sprite" parent="."]
-position = Vector2( 0, -1.52588e-05 )
+position = Vector2( 1.52588e-05, 0 )
 scale = Vector2( 2.11905, 2.11905 )
 texture = ExtResource( 2 )
 
 [node name="Position2D" type="Position2D" parent="body"]
-position = Vector2( 0.000343323, 54.7415 )
+position = Vector2( 0.000335693, 54.7415 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
