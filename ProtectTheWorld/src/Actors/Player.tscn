@@ -13,7 +13,7 @@ extents = Vector2( 77.9998, 88.0002 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Damage_Taken"
-length = 0.5
+length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("body:modulate")
 tracks/0/interp = 1
@@ -114,16 +114,18 @@ __meta__ = {
 "_edit_group_": true
 }
 speed = 290.0
+fire_cooldown = 0.8
 
 [node name="body" type="Sprite" parent="."]
-position = Vector2( 1.52588e-05, 0 )
+position = Vector2( -3.76701e-05, -6 )
 scale = Vector2( 2.11905, 2.11905 )
 texture = ExtResource( 2 )
 
 [node name="Position2D" type="Position2D" parent="body"]
-position = Vector2( 0.000335693, 54.7415 )
+position = Vector2( 0.000343323, 54.7415 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -3.76463e-05, -6 )
 shape = SubResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]

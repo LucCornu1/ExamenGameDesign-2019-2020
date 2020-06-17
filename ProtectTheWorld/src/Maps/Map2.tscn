@@ -86,33 +86,48 @@ position = Vector2( 3328, 809 )
 rotation = -1.77303
 
 [node name="Obstacle10" parent="Obstacles" instance=ExtResource( 5 )]
-position = Vector2( 1181, 91 )
+position = Vector2( 1385, 97 )
 rotation = 0.389387
 type = 6
 
 [node name="Obstacle11" parent="Obstacles" instance=ExtResource( 5 )]
-position = Vector2( 1014, 147 )
+position = Vector2( 1218, 153 )
 rotation = -0.136131
 type = 6
 
 [node name="Obstacle12" parent="Obstacles" instance=ExtResource( 5 )]
-position = Vector2( 1161, 203 )
+position = Vector2( 1365, 209 )
 rotation = 1.65084
 type = 6
 
 [node name="Obstacle17" parent="Obstacles" instance=ExtResource( 5 )]
-position = Vector2( 1063, 261 )
+position = Vector2( 1267, 267 )
 rotation = -0.116944
 type = 6
 
 [node name="Obstacle16" parent="Obstacles" instance=ExtResource( 5 )]
-position = Vector2( 921, 309 )
+position = Vector2( 1125, 315 )
 rotation = -0.642462
 type = 6
 
 [node name="Obstacle15" parent="Obstacles" instance=ExtResource( 5 )]
-position = Vector2( 1009, 406 )
+position = Vector2( 1213, 412 )
 rotation = 1.14451
+type = 6
+
+[node name="Obstacle59" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 1577, 1329 )
+rotation = 0.12324
+type = 6
+
+[node name="Obstacle58" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 1285, 1410 )
+rotation = -0.402278
+type = 6
+
+[node name="Obstacle57" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 1685, 1398 )
+rotation = 1.38469
 type = 6
 
 [node name="Obstacle46" parent="Obstacles" instance=ExtResource( 5 )]
@@ -121,12 +136,32 @@ rotation = -1.5913
 type = 6
 
 [node name="Obstacle44" parent="Obstacles" instance=ExtResource( 5 )]
-position = Vector2( 3653, 160 )
+position = Vector2( 3659, 164 )
 rotation = -0.329843
+type = 6
+
+[node name="Obstacle78" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 3618, 324 )
+rotation = 0.0546689
 type = 6
 
 [node name="Obstacle43" parent="Obstacles" instance=ExtResource( 5 )]
 position = Vector2( 3541, 216 )
+rotation = -2.09763
+type = 6
+
+[node name="Obstacle77" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 4173, 790 )
+rotation = -1.0264
+type = 6
+
+[node name="Obstacle76" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 4248, 681 )
+rotation = 0.0874604
+type = 6
+
+[node name="Obstacle75" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 4099, 935 )
 rotation = -2.09763
 type = 6
 
@@ -150,6 +185,11 @@ position = Vector2( 2997, 1348 )
 rotation = 1.79243
 type = 6
 
+[node name="Obstacle70" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 4174, 1345 )
+rotation = 1.79243
+type = 6
+
 [node name="Obstacle45" parent="Obstacles" instance=ExtResource( 5 )]
 position = Vector2( 2894, 1432 )
 rotation = -0.782633
@@ -160,29 +200,114 @@ position = Vector2( 2783, 1201 )
 rotation = 2.86648
 type = 6
 
+[node name="Obstacle65" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 3877, 1132 )
+rotation = 1.54895
+type = 6
+
+[node name="Obstacle64" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 3665, 1285 )
+rotation = 1.16272
+type = 6
+
+[node name="Obstacle63" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 3792, 1231 )
+rotation = 1.79243
+type = 6
+
+[node name="Obstacle62" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 3731, 1384 )
+rotation = -0.782633
+type = 6
+
+[node name="Obstacle61" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 3554, 1391 )
+rotation = 2.86648
+type = 6
+
+[node name="Obstacle69" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 4022, 1366 )
+rotation = 1.44758
+type = 6
+
+[node name="Obstacle68" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 4076, 1243 )
+rotation = 2.70311
+type = 6
+
+[node name="Obstacle67" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 3943, 1251 )
+rotation = -0.782633
+type = 6
+
+[node name="Obstacle66" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 3871, 1369 )
+rotation = 2.86648
+type = 6
+
 [node name="Obstacle20" parent="Obstacles" instance=ExtResource( 5 )]
-position = Vector2( 905, 166 )
+position = Vector2( 1109, 172 )
 rotation = -0.603161
 type = 6
 
 [node name="Obstacle19" parent="Obstacles" instance=ExtResource( 5 )]
-position = Vector2( 798, 106 )
+position = Vector2( 1002, 112 )
 rotation = -1.12868
 type = 6
 
 [node name="Obstacle21" parent="Obstacles" instance=ExtResource( 5 )]
-position = Vector2( 913, 41 )
+position = Vector2( 1117, 47 )
 rotation = -0.00989759
 type = 6
 
 [node name="Obstacle22" parent="Obstacles" instance=ExtResource( 5 )]
-position = Vector2( 1064, 44 )
+position = Vector2( 1268, 50 )
 rotation = 0.745378
 type = 6
 
+[node name="Obstacle54" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 1801, 8 )
+rotation = 0.073566
+type = 6
+
+[node name="Obstacle55" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 1965, 58.0001 )
+rotation = 0.745378
+type = 6
+
+[node name="Obstacle56" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 2188, -6.10352e-05 )
+rotation = 1.55012
+type = 6
+
+[node name="Obstacle60" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 2116, 133 )
+rotation = 2.09798
+type = 6
+
 [node name="Obstacle18" parent="Obstacles" instance=ExtResource( 5 )]
-position = Vector2( 796, 233 )
+position = Vector2( 1000, 239 )
 rotation = 0.658297
+type = 6
+
+[node name="Obstacle53" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 1132, 1431 )
+rotation = -0.869308
+type = 6
+
+[node name="Obstacle52" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 1213, 1333 )
+rotation = -1.39483
+type = 6
+
+[node name="Obstacle51" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 1338, 1322 )
+rotation = -0.276045
+type = 6
+
+[node name="Obstacle50" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 1461, 1365 )
+rotation = 0.479231
 type = 6
 
 [node name="Obstacle40" parent="Obstacles" instance=ExtResource( 5 )]
@@ -205,9 +330,34 @@ position = Vector2( 3546, 77.0001 )
 rotation = -1.23531
 type = 6
 
+[node name="Obstacle74" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 4017, 1108 )
+rotation = -1.6806
+type = 6
+
+[node name="Obstacle73" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 4150, 1058 )
+rotation = -4.14941
+type = 6
+
+[node name="Obstacle72" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 4207, 1183 )
+rotation = -3.22822
+type = 6
+
+[node name="Obstacle71" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 4219, 920 )
+rotation = -1.46952
+type = 6
+
 [node name="Obstacle33" parent="Obstacles" instance=ExtResource( 5 )]
 position = Vector2( 347, 79 )
 rotation = 3.09801
+type = 6
+
+[node name="Obstacle49" parent="Obstacles" instance=ExtResource( 5 )]
+position = Vector2( 563, 26 )
+rotation = 3.97453
 type = 6
 
 [node name="Obstacle32" parent="Obstacles" instance=ExtResource( 5 )]
