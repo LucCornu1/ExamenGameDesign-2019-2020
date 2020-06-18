@@ -37,7 +37,7 @@ func _physics_process(_delta):
 func move_player() -> Vector2:
 	var out : Vector2
 	var dir : Vector2
-	var mouse_position: = get_global_mouse_position()
+	var mouse_position: Vector2 = get_global_mouse_position()
 	
 	if Input.is_action_pressed("move&shoot"):
 		if !(mouse_position.x <= position.x +15 and mouse_position.y <= position.y +15) or !(mouse_position.x >= position.x -15 and mouse_position.y >= position.y -15):
@@ -63,7 +63,6 @@ func take_damage(damage: int):
 		animation.play("Damage_Taken")
 	else:
 		death()
-
 
 
 func slow(b: bool):
