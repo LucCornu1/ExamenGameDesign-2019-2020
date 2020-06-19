@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Terrain/terrain_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://src/Actors/Ennemi.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Environment/Obstacle.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/UserInterface/HUD.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Objects/Objective.tscn" type="PackedScene" id=7]
 
 [node name="Map2-BIS" type="Node2D"]
 script = ExtResource( 3 )
@@ -368,6 +369,9 @@ rotation = 0.623287
 type = 7
 
 [node name="HUD" parent="." instance=ExtResource( 6 )]
+
+[node name="Objective" parent="." instance=ExtResource( 7 )]
+position = Vector2( 4163, 440 )
 [connection signal="shoot" from="Player" to="." method="_on_Player_shoot"]
 [connection signal="shoot" from="Ennemi" to="." method="_on_Ennemi_shoot"]
 [connection signal="shoot" from="Ennemi2" to="." method="_on_Ennemi_shoot"]
