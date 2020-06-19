@@ -4,6 +4,7 @@ signal shoot
 signal damage_taken
 
 export (PackedScene) var bullet = preload("res://src/Actors/Bullet.tscn")
+export (PackedScene) var deathScreen = preload("res://src/Screens/MainScreen.tscn")
 export (float) var fire_cooldown = 0.6
 export (int) var health = 5
 export (bool) var can_shoot = true
@@ -59,6 +60,7 @@ func _on_Timer_timeout():
 func take_damage(damage: int):
 	health -= damage
 	emit_signal("damage_taken", health * 100/max_health)
+	Stuff.hit += 1
 	if health > 0:
 		animation.play("Damage_Taken")
 	else:
@@ -76,3 +78,5 @@ func death():
 	animation.play("Death")
 	yield(animation, "animation_finished")
 	queue_free()
+# warning-ignore:return_value_discarded
+	get_tree().change_scene_to(deathScreen)

@@ -31,39 +31,34 @@ margin_bottom = 266.759
 custom_fonts/font = ExtResource( 1 )
 text = "PAUSED"
 
-[node name="PauseMenu" type="VBoxContainer" parent="PauseOverlay"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -393.95
-margin_top = -253.0
-margin_right = 394.05
-margin_bottom = 90.0
+[node name="Pause" type="Button" parent="PauseOverlay"]
+margin_left = 566.05
+margin_top = 287.0
+margin_right = 1354.05
+margin_bottom = 387.0
+mouse_default_cursor_shape = 1
+custom_fonts/font = ExtResource( 1 )
+text = "Continuer"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ChangeSceneButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 3 )]
-margin_right = 788.0
-margin_bottom = 136.0
+[node name="ChangeSceneButton" parent="PauseOverlay" instance=ExtResource( 3 )]
+margin_left = 566.0
+margin_top = 387.0
+margin_right = 1354.0
+margin_bottom = 487.0
 mouse_default_cursor_shape = 1
 custom_fonts/font = ExtResource( 1 )
 text = "Menu principal"
 next_Scene_Path = "res://src/Screens/MainScreen.tscn"
 
-[node name="Pause" type="Button" parent="PauseOverlay/PauseMenu"]
-margin_top = 140.0
-margin_right = 788.0
-margin_bottom = 203.0
-custom_fonts/font = ExtResource( 1 )
-text = "Continuer"
-
-[node name="QuitMenu" parent="PauseOverlay/PauseMenu" instance=ExtResource( 4 )]
-margin_top = 207.0
-margin_right = 788.0
-margin_bottom = 343.0
+[node name="QuitMenu" parent="PauseOverlay" instance=ExtResource( 4 )]
+margin_left = 566.0
+margin_top = 487.0
+margin_right = 1354.0
+margin_bottom = 587.0
 mouse_default_cursor_shape = 1
 custom_fonts/font = ExtResource( 1 )
-[connection signal="button_up" from="PauseOverlay/PauseMenu/ChangeSceneButton" to="." method="_on_Menu_button_up"]
-[connection signal="button_up" from="PauseOverlay/PauseMenu/Pause" to="." method="_on_Pause_button_up"]
+[connection signal="button_up" from="PauseOverlay/Pause" to="." method="_on_Pause_button_up"]
+[connection signal="button_up" from="PauseOverlay/ChangeSceneButton" to="." method="_on_Menu_button_up"]

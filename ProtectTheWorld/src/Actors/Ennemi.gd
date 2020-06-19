@@ -32,6 +32,7 @@ func death():
 	$hitbox.set_deferred("disabled", true)
 	yield(animation, "animation_finished")
 	queue_free()
+	Stuff.score += 1
 
 
 func shoot(dir: Vector2):
