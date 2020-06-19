@@ -48,7 +48,9 @@ func move_player() -> Vector2:
 			out = speed*dir
 			out.x = clamp(out.x, -speed, speed)
 			out.y = clamp(out.y, -speed, speed)
-		shoot()
+		
+		if Stuff.ammo_on:
+			shoot()
 	
 	return out
 
